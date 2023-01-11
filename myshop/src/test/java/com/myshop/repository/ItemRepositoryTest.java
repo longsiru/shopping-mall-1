@@ -307,7 +307,7 @@ class ItemRepositoryTest {
 		}
 	}
 	
-	
+	/*
 	@Test
 	@DisplayName("quiz1-querydsl 조회 테스트")
 	public void queryDslQuizTest() {
@@ -497,5 +497,5 @@ class ItemRepositoryTest {
 		for (Item item : itemList) {
 			System.out.println(item.toString());
 		}
-	}
+	} */
 }

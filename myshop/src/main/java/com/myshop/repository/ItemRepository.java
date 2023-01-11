@@ -48,6 +48,9 @@ public interface ItemRepository extends JpaRepository<Item, Long>{
 	//@Query(value = "select * from Item i where i.price >= ?1 ", nativeQuery = true)
 	//List<Item> findByPriceByNative(@Param("price") Integer price);
 	
+	//@Query(value = "select * from Item i where i.item_nm = :itemNm and i.item_sell_status = :#{#sell.name()}", nativeQuery = true)
+	//List<Item> findByItemNmAndItemSellStatusByNative(@Param("itemNm") String itemNm, @Param("sell") ItemSellStatus sell);
+	
 	//@Query(value = "select * from Item i where i.item_nm = :itemNm and i.item_sell_status = :itemSellStatus", nativeQuery = true)
 	//List<Item> findByItemNmAndItemSellStatusByNative(@Param("itemNm") String itemNm, @Param("itemSellStatus") String itemSellStatus);
 	
