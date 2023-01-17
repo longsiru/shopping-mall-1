@@ -22,6 +22,7 @@ public class Member {
 	@Column(name="member_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
 	private String name;
 	
 	@Column(unique = true)
