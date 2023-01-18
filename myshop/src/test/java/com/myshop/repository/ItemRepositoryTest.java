@@ -35,7 +35,7 @@ class ItemRepositoryTest {
 	ItemRepository itemRepository;
 	
 	@PersistenceContext //영속성 컨텍스트를 사용하기 위해 선언
-	EntityManager em;
+	EntityManager em;  //entity manager
 	
 	/*
 	 * @Test
