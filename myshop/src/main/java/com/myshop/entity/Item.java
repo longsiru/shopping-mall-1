@@ -1,6 +1,5 @@
 package com.myshop.entity;
 
-import java.time.LocalDateTime;
 
 import javax.persistence.*;
 
@@ -16,13 +15,13 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Item {
+public class Item extends BaseEntity{
 	//NOT NULL 아니면 필드 TYPE는을 객제(예:INTT --INTRGER)로 지정해야 한다.
 	
 	@Id
 	@Column(name="item_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id; //상품코드
+	private Long id; //상품코드
 	
 	
 	@Column(nullable = false, length = 50)
@@ -41,10 +40,6 @@ public class Item {
 	@Enumerated(EnumType.STRING)
 	private ItemSellStatus itemSellStatus;//상품 판매상태
 	
-	
-	private LocalDateTime regTime;//등록시간
-	
-	
-	private LocalDateTime updateTime;//수정시간
+
 	 
 }
