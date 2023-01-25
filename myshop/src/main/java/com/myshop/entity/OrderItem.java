@@ -31,4 +31,23 @@ public class OrderItem extends BaseEntity{
 
 	
 	private int count; //주문수량
+	
+	
+	//주문할 상품과 주문 수량을 통해 orderItem객체를 만듬
+	public static OrderItem createOrderItem(Item item, int count) {
+		OrderItem orderItem = new OrderItem();
+		orderItem.setItem(item);
+		orderItem.setCount(count);
+		orderItem.setOrderPrice(item.getPrice());
+		
+		item.removeStock(count);
+		
+		return orderItem;
+	}
+	
+	//주문한 충 가격
+	public int getTotalPrice() {
+		return orderPrice*count;
+		
+	}
 }
