@@ -12,7 +12,7 @@ import com.myshop.repository.MemberRepository;
 
 import lombok.RequiredArgsConstructor;
 
-@Service  //클래스의 멱할
+@Service  //service클래스의 역할
 @Transactional  //서비스 클래스에서 로직을 처라하다가 에러가 발생하명 로직
 @RequiredArgsConstructor
 public class MemberService implements UserDetailsService{ //UserDetailsService:로그인시 require에서 넘어온 사용자 정보를 받음
@@ -26,7 +26,7 @@ public class MemberService implements UserDetailsService{ //UserDetailsService:�
 				throw new UsernameNotFoundException(email);
 			}
 		return User.builder()
-				.username(member.getName())
+				.username(member.getEmail())
 				.password(member.getPassword())
 				.roles(member.getRole().toString())
 				.build();
